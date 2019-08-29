@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <h1>Gallery</h1>
+
+    <a href="/index.php">Upload</a>
+    <?php if(isset($_GET['id'])): ?>
+        <a href="/php/gallery.php">Return to gallery</a>
+    <?php endif; ?>
+    <hr>
+
+    <div class="gallery">
+        <?php foreach($images as $image): ?>
+            <!-- <img src='<?php echo $image['base64']; ?>'/> -->
+            <!-- <img src="<?php echo 'data:image/jpeg;base64, '.base64_encode($image['blob']) ?>"/> -->
+            <a href="/php/gallery.php?id=<?php echo $image['id']; ?>">
+                <img src="<?php loadImage($image); ?>"/>
+            </a>
+        <?php endforeach; ?>
+    </div>
+
+
+</body>
+</html>

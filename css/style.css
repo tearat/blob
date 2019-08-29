@@ -1,0 +1,36 @@
+body {
+    background-color: #222;
+    color: white;
+}
+
+a {
+    color: crimson;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    color: white;
+}
+
+form input {
+    background-color: #444;
+    margin-top: 20px;
+    color: white;
+    display: block;
+    width: 100%;
+    border: none;
+    padding: 20px;
+    font-size: 20px;
+}
+
+.gallery img {
+    width: 200px;
+}
